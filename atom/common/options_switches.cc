@@ -143,6 +143,15 @@ const char kOverlayFullscreenVideo[]     = "overlay-fullscreen-video";
 const char kSharedWorker[]               = "shared-worker";
 const char kPageVisibility[]             = "page-visiblity";
 
+// Enable Widevine CDM.
+const char kEnableWidevineCdm[] = "enable-widevine-cdm";
+
+// Path to Widevine CDM binaries.
+const char kWidevineCdmPath[] = "widevine-cdm-path";
+
+// Widevine CDM version.
+const char kWidevineCdmVersion[] = "widevine-cdm-version";
+
 }  // namespace switches
 
 }  // namespace atom

@@ -82,6 +82,9 @@ extern const char kOverlayScrollbars[];
 extern const char kOverlayFullscreenVideo[];
 extern const char kSharedWorker[];
 extern const char kPageVisibility[];
+extern const char kEnableWidevineCdm[];
+extern const char kWidevineCdmPath[];
+extern const char kWidevineCdmVersion[];
 
 }  // namespace switches
 
