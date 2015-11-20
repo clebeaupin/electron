@@ -41,8 +41,8 @@
 #include "third_party/widevine/cdm/stub/widevine_cdm_version.h"
 
 // The following must be after widevine_cdm_version.h.
-#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS) && \
-    !defined(WIDEVINE_CDM_IS_COMPONENT)
+#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS) /*&& \
+    !defined(WIDEVINE_CDM_IS_COMPONENT)       */
 #include "chrome/common/widevine_cdm_constants.h"
 #endif
 
@@ -91,8 +91,8 @@ content::PepperPluginInfo CreatePepperFlashInfo(const base::FilePath& path,
 }
 
 
-#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS) && \
-    !defined(WIDEVINE_CDM_IS_COMPONENT)
+#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS)/* && \
+    !defined(WIDEVINE_CDM_IS_COMPONENT)         */
 
 content::PepperPluginInfo CreateWidevineCdmInfo(const base::FilePath& path,
                                                 const std::string& version) {
@@ -160,8 +160,8 @@ void AddPepperFlashFromCommandLine(
 void AddWidevineCdmFromCommandLine(
     std::vector<content::PepperPluginInfo>* plugins) {
 
-#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS) && \
-    !defined(WIDEVINE_CDM_IS_COMPONENT)
+#if defined(WIDEVINE_CDM_AVAILABLE) && defined(ENABLE_PEPPER_CDMS) /*&& \
+    !defined(WIDEVINE_CDM_IS_COMPONENT)                    */
 
   auto command_line = base::CommandLine::ForCurrentProcess();
   auto widevine_cdm_path = command_line->GetSwitchValueNative(
